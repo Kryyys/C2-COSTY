@@ -1,15 +1,12 @@
 class TeamGenerator {
-  
-  // CONSTRUCTEUR
   constructor(players, playersPerTeam = 3) {
     this.players = players;
     this.playersPerTeam = playersPerTeam;
     this.teams = [];
   }
 
-  // Générer une team aléatoire
   generateTeams() {
-    let shuffledPlayers = [...this.players].sort(() => 0.5 - Math.random()); // Mélange aléatoire des joueurs
+    let shuffledPlayers = [...this.players].sort(() => 0.5 - Math.random());
     let teamIndex = 0;
 
     while (shuffledPlayers.length > 0) {
@@ -24,43 +21,35 @@ class TeamGenerator {
     }
   }
 
-  // Obtenir la team
   getTeams() {
     return this.teams;
   }
 
-  // Réinitialiser la team
   resetTeams() {
     this.teams = [];
   }
 
-  // Obtenir les joueurs 
   getPlayers() {
     return this.players;
   }
 
-  // Ajouter des joueurs
   addPlayers(newPlayers) {
     this.players = [...this.players, ...newPlayers];
   }
 
-  // Supprimer des joueurs
   removePlayers(playersToRemove) {
     this.players = this.players.filter(player => !playersToRemove.includes(player));
   }
 
-  // Obtenir le nombre de joueurs total
-  playersNumber(num) {
-    this.playersNumber = num;
+  setPlayersPerTeam(num) {
+    this.playersPerTeam = num;
   }
 
-  // Obtenir le nombre de teams
-  totalTeams() {
+  getTotalTeams() {
     return this.teams.length;
   }
-
 }
 
-export default  TeamGenerator
+module.exports = TeamGenerator;
 
 
