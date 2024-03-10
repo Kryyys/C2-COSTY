@@ -28,13 +28,13 @@ describe('TeamGenerator', () => {
   });
 
   it('distribue les joueurs dans les teams', () => {
-    teamGenerator.setPlayersPerTeam(4);
+    teamGenerator.playersNumber(4);
     expect(teamGenerator.playersPerTeam).toEqual(4);
   });
 
   it('renvoie le nombre de teams générées', () => {
     teamGenerator.generateTeams();
-    const totalTeams = teamGenerator.getTotalTeams();
+    const totalTeams = teamGenerator.totalTeams();
     expect(totalTeams).toEqual(2); // Suppose qu'il y a 5 joueurs et 3 joueurs par équipe
   });
 });

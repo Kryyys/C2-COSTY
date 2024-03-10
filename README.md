@@ -10,4 +10,4 @@ Ce projet consiste en un générateur de tournoi permettant de planifier et de s
 
 ## Plan et Stratégie de Test
 
-Ce projet est accompagné de tests unitaires pour garantir le bon fonctionnement de chaque fonctionnalité. 
+Ce projet est accompagné de tests unitaires pour garantir le bon fonctionnement de chaque fonctionnalité.   

@@ -48,11 +48,11 @@ class TeamGenerator {
     this.players = this.players.filter(player => !playersToRemove.includes(player));
   }
 
-  setPlayersPerTeam(num) {
+  playersNumber(num) {
     this.playersPerTeam = num;
   }
 
-  getTotalTeams() {
+  totalTeams() {
     return this.teams.length;
   }
 }
